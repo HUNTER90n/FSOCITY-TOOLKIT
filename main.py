@@ -4,21 +4,31 @@ import pyfiglet
 from colorama import Fore, Style
 import Vulnerability_Scanning
 import FPC
+import Worm
+import DDOS
+
+# ---- Set your project folder here ----
+project_folder = r"C:\Users\AHMAD QURESHI\Desktop\my pythons\project"
+os.chdir(project_folder)   # Change working directory to your project folder
+sys.path.append(project_folder)
 
 # ---- Banner ----
 banner = pyfiglet.figlet_format("FSOCITY")
-print(Fore.CYAN + banner + Style.RESET_ALL)
+print(Fore.RED + banner + Style.RESET_ALL)
 print(Fore.GREEN + "FSOCITY IS CREATED BY @HUNTER90n" + Style.RESET_ALL)
 print(Fore.YELLOW + "Welcome to FSOCITY ULTIMATE HACKING TOOLKIT!" + Style.RESET_ALL)
 
 while True:
     print(Fore.MAGENTA + "\nMain Menu:" + Style.RESET_ALL)
-    print(Fore.RED + "1. File Password Cracker" + Style.RESET_ALL)
+    print(Fore.RED + "1. File Password Cracker (V.FAST)" + Style.RESET_ALL)
     print(Fore.GREEN + "2. Vulnerability Scanning" + Style.RESET_ALL)
-    print(Fore.BLUE + "3. About Us" + Style.RESET_ALL)
-    print(Fore.WHITE + "4. Exit" + Style.RESET_ALL)
+    print(Fore.BLUE + "3. Worm GPT" + Style.RESET_ALL)
+    print(Fore.CYAN + "4. DDoS Attack" + Style.RESET_ALL)
+    print(Fore.MAGENTA + "5. BUG_SCAN (SOON)" + Style.RESET_ALL)
+    print(Fore.YELLOW + "6. About Us" + Style.RESET_ALL)
+    print(Fore.WHITE + "7. Exit" + Style.RESET_ALL)
 
-    choice = input("Select an option (1-4): ")
+    choice = input("Select an option (1-7): ")
 
     if choice == '1':
         FPC.FPC_cracker()
@@ -29,10 +39,22 @@ while True:
         input("\nPress Enter to return...")
 
     elif choice == '3':
-        os.system(f'"{sys.executable}" about.py')
+        Worm.W_GPT()
         input("\nPress Enter to return...")
 
     elif choice == '4':
+        DDOS.S_DOS()
+        input("\nPress Enter to return...")
+
+    elif choice == '5':
+        os.system(f'"{sys.executable}" bug_hunter.py')
+        input("\nPress Enter to return...")
+
+    elif choice == '6':
+        os.system(f'"{sys.executable}" about.py')
+        input("\nPress Enter to return...")
+
+    elif choice == '7':
         print(Fore.RED + "Exiting FSOCITY. Goodbye!" + Style.RESET_ALL)
         break
 
