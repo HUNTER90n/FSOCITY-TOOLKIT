@@ -7,11 +7,6 @@ import FPC
 import Worm
 import DDOS
 
-# ---- Set your project folder here ----
-project_folder = r"C:\Users\AHMAD QURESHI\Desktop\my pythons\project"
-os.chdir(project_folder)   # Change working directory to your project folder
-sys.path.append(project_folder)
-
 # ---- Banner ----
 banner = pyfiglet.figlet_format("FSOCITY")
 print(Fore.RED + banner + Style.RESET_ALL)
@@ -60,4 +55,5 @@ while True:
 
     else:
         print(Fore.RED + "Invalid choice. Try again." + Style.RESET_ALL)
+
 
